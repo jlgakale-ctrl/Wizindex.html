@@ -1,116 +1,101 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>My First GitHub Page</title> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Website</title>
 
-    <!-- Font Awesome (for menu icon) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
+/* NAVBAR (clean original style) */
+.navbar {
+    background: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+}
 
-        /* NAVBAR */
-        .navbar {
-            background: white;
-            padding: 15px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-        }
+.nav-wrapper {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .nav-wrapper {
-            max-width: 1000px;
-            margin: auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
 
-        .logo h1 {
-            font-size: 20px;
-            margin: 0;
-        }
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            padding: 0;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: black;
-            font-weight: bold;
-        }
+.nav-links a:hover {
+    color: #c62a2f;
+}
 
-        .nav-links a:hover {
-            color: #c62a2f;
-        }
+.call-btn {
+    background: #c62a2f;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+}
 
-        .mobile-menu {
-            display: none;
-            font-size: 22px;
-            cursor: pointer;
-        }
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #0f172a;
+    color: white;
+}
+</style>
+</head>
 
-        /* SIMPLE CONTENT */
-        main {
-            padding: 40px;
-            text-align: center;
-        }
+<body>
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #f2f2f2;
-        }
-    </style>
-</head> 
-
-<body> 
-
-<!-- NAVIGATION BAR -->
+<!-- NAVBAR -->
 <header class="navbar">
     <div class="nav-wrapper">
-        <div class="logo">
-            <h1>My Website</h1>
-        </div>
+
+        <div class="logo">MY WEBSITE</div>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
+
+            <!-- CAR PAGE LINK -->
+            <li><a href="cars.html">Cars</a></li>
+
             <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
-        <div class="mobile-menu">
-            <i class="fas fa-bars"></i>
-        </div>
+        <a class="call-btn" href="tel:+26712345678">Call Now</a>
+
     </div>
 </header>
 
-<!-- MAIN CONTENT -->
-<main> 
-    <header> 
-        <h1>Welcome to My Website!</h1> 
-    </header> 
+<!-- HERO -->
+<section class="hero">
+    <h1>Welcome to My Website</h1>
+    <p>Find your perfect car easily</p>
+</section>
 
-    <p>This is a simple webpage hosted on GitHub Pages.</p> 
-
-    <p>Visit <a href="https://github.com">GitHub</a> to learn more about coding.</p> 
-</main> 
-
-<!-- FOOTER -->
-<footer> 
-    <p>&copy; 2025 Your Name</p> 
-</footer> 
-
-</body> 
+</body>
 </html>
