@@ -4,34 +4,113 @@
     <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>My First GitHub Page</title> 
+
+    <!-- Font Awesome (for menu icon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+        }
+
+        .nav-wrapper {
+            max-width: 1000px;
+            margin: auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: #c62a2f;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        /* SIMPLE CONTENT */
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #f2f2f2;
+        }
+    </style>
 </head> 
+
 <body> 
+
+<!-- NAVIGATION BAR -->
+<header class="navbar">
+    <div class="nav-wrapper">
+        <div class="logo">
+            <h1>My Website</h1>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main> 
     <header> 
-
         <h1>Welcome to My Website!</h1> 
-
     </header> 
 
-    <main> 
+    <p>This is a simple webpage hosted on GitHub Pages.</p> 
 
-        <p>This is a simple webpage hosted on GitHub Pages.</p> 
+    <p>Visit <a href="https://github.com">GitHub</a> to learn more about coding.</p> 
+</main> 
 
-        <p>Here's a picture of a cute cat:</p> 
-
-        <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?w=500" alt="A cute kitten"> 
-
-        <p>Visit <a href="https://github.com">GitHub</a> to learn more about coding.</p> 
-
-    </main> 
-
-    <footer> 
-
-        <p>&copy; 2025 Your Name</p> 
-
-    </footer> 
-
- 
+<!-- FOOTER -->
+<footer> 
+    <p>&copy; 2025 Your Name</p> 
+</footer> 
 
 </body> 
-
-</html> 
+</html>
