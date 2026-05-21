@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEV Autos | About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            padding-top: 100px;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #cccccc;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+        }
+
+        .about-section {
+            padding: 60px 10%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .about-content p {
+            font-size: 1.05rem;
+            color: #aaaaaa;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        blockquote {
+            border-left: 2px solid #ffffff;
+            padding-left: 20px;
+            margin: 40px 0;
+            font-style: italic;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">ZEV Autos</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cars.html">Cars</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="about-section">
+        <h2 class="section-title">Our Heritage</h2>
+        <div class="about-content">
+            <p>Founded on a devotion to elite engineering, ZEV Autos has grown to become a benchmark space for high-end luxury vehicle curation. We understand that purchasing an automobile is more than a commercial transaction—it is an investment in lifestyle, aesthetics, and mechanical legacy.</p>
+            
+            <blockquote>
+                "We don't just supply cars. We deliver uncompromised refinement."
+            </blockquote>
+
+            <p>Every vehicle in our showroom inventory undergoes strict testing, ensuring it lives up to our high quality baseline. From modern, connected executive spaces to track-focused icons, our collection brings together the pinnacle of performance.</p>
+        </div>
+    </section>
+
+</body>
+</html>
