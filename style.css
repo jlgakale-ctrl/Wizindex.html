@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #cccccc;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #ffffff;
+}
+
+.detail-section {
+    padding: 140px 10% 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.car-title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.showcase-img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border: 1px solid #1a1a1a;
+    margin-bottom: 50px;
+}
+
+.specs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+.specs-table td {
+    padding: 20px;
+    border-bottom: 1px solid #1a1a1a;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.specs-table td:first-child {
+    color: #888888;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    width: 35%;
+}
+
+.specs-table td:last-child {
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.description-box {
+    max-width: 800px;
+    margin-bottom: 60px;
+}
+
+.description-box p {
+    font-size: 1.15rem;
+    color: #888888;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.action-box {
+    border-top: 1px solid #1a1a1a;
+    padding-top: 50px;
+    text-align: left;
+}
+
+.action-box h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 35px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
