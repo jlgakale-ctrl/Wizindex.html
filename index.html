@@ -1,101 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEV Autos | Home</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial;
-}
+        body {
+            background-color: #0b0b0b;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
 
-/* NAVBAR (clean original style) */
-.navbar {
-    background: white;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-}
+        /* --- NAVIGATION HEADER --- */
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 10%;
+            z-index: 100;
+        }
 
-.nav-wrapper {
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #ffffff;
+        }
 
-.logo {
-    font-size: 20px;
-    font-weight: bold;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
+        .nav-links a {
+            color: #cccccc;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            transition: color 0.3s ease;
+        }
 
-.nav-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+        }
 
-.nav-links a:hover {
-    color: #c62a2f;
-}
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
 
-.call-btn {
-    background: #c62a2f;
-    color: white;
-    padding: 8px 14px;
-    border-radius: 6px;
-    text-decoration: none;
-}
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -2;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
 
-/* HERO */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: #0f172a;
-    color: white;
-}
-</style>
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin-bottom: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            color: #cccccc;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 12px 35px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff;
+            background: transparent;
+            border: 1px solid #ffffff;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* --- INTRO INFO SECTION --- */
+        .intro-section {
+            padding: 100px 10%;
+            background-color: #0b0b0b;
+            text-align: center;
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .intro-section h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            color: #888888;
+            line-height: 1.8;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <div class="nav-wrapper">
-
-        <div class="logo">MY WEBSITE</div>
-
+    <header>
+        <a href="index.html" class="logo">ZEV Autos</a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-
-            <!-- CAR PAGE LINK -->
+            <li><a href="index.html" class="active">Home</a></li>
             <li><a href="cars.html">Cars</a></li>
-
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
+    </header>
 
-        <a class="call-btn" href="tel:+26712345678">Call Now</a>
+    <section class="hero">
+        <video class="video-bg" autoplay loop muted playsinline>
+            <source src="abc25-017/Images/bmw-m4-black.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="overlay"></div>
 
-    </div>
-</header>
+        <h1>ZEV Autos</h1>
+        <p>Experience Pure Luxury & Performance</p>
+        <a href="cars.html" class="btn">Explore The Fleet</a>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Welcome to My Website</h1>
-    <p>Find your perfect car easily</p>
-</section>
+    <section class="intro-section">
+        <div class="intro-content">
+            <h2>The New Era of Driving</h2>
+            <p>
+                At ZEV Autos, we curate premium automotive excellence. By blending engineering masterclasses with sleek aesthetics, we offer vehicles that aren't just meant to get you from point A to point B—they are engineered to make you feel alive. Discover our meticulous selection of luxury sedans designed for discerning drivers.
+            </p>
+            <a href="about.html" class="btn" style="font-size: 0.8rem; padding: 10px 25px;">Our Story</a>
+        </div>
+    </section>
 
 </body>
 </html>
