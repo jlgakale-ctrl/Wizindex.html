@@ -15,7 +15,7 @@
         body {
             background-color: #0b0b0b;
             color: #ffffff;
-            padding-top: 100px; /* Space for absolute header */
+            padding-top: 140px; /* Pushed down slightly to clear the header completely */
         }
 
         header {
@@ -59,7 +59,7 @@
         }
 
         .sedan-section {
-            padding: 60px 10%;
+            padding: 40px 10%;
         }
 
         .section-title {
@@ -84,14 +84,29 @@
             border-radius: 4px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none; /* Keeps links from getting underlines */
-            color: inherit; /* Keeps text color matching your style */
-            display: block; /* Makes the entire box clickable */
+            position: relative; /* Essential for the absolute link overlay */
         }
 
         .car-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+        }
+
+        .car-card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* This creates an invisible layer over the entire card, making images 100% clickable */
+        .car-card-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
         }
 
         .car-img {
@@ -110,6 +125,7 @@
             font-weight: 500;
             letter-spacing: 1px;
             margin-bottom: 10px;
+            color: #ffffff;
         }
 
         .car-desc {
@@ -136,31 +152,37 @@
         
         <div class="car-grid">
             <!-- BMW 3 Series Card -->
-            <a href="3series.html" class="car-card">
+            <div class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" alt="BMW 3 Series">
                 <div class="car-info">
-                    <h3 class="car-name">BMW 3 Series</h3>
+                    <h3 class="car-name">
+                        <a href="3series.html" class="car-card-link">BMW 3 Series</a>
+                    </h3>
                     <p class="car-desc">The ultimate driver's car. Combining iconic styling, track efficiency, and everyday luxury in a perfect compact layout.</p>
                 </div>
-            </a>
+            </div>
 
             <!-- BMW 5 Series Card -->
-            <a href="5series.html" class="car-card">
+            <div class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800" alt="BMW 5 Series">
                 <div class="car-info">
-                    <h3 class="car-name">BMW 5 Series</h3>
+                    <h3 class="car-name">
+                        <a href="5series.html" class="car-card-link">BMW 5 Series</a>
+                    </h3>
                     <p class="car-desc">The benchmark of the executive class. Blending state-of-the-art technology with sharp, athletic road presence.</p>
                 </div>
-            </a>
+            </div>
 
             <!-- BMW M5 Card -->
-            <a href="m5.html" class="car-card">
+            <div class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&q=80&w=800" alt="BMW M5">
                 <div class="car-info">
-                    <h3 class="car-name">BMW M5</h3>
+                    <h3 class="car-name">
+                        <a href="m5.html" class="car-card-link">BMW M5</a>
+                    </h3>
                     <p class="car-desc">Track-ready supercar performance hidden inside a beautiful luxury sedan body. Unmatched power and precision.</p>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
