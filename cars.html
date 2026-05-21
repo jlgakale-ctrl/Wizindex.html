@@ -84,6 +84,9 @@
             border-radius: 4px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none; /* Keeps links from getting underlines */
+            color: inherit; /* Keeps text color matching your style */
+            display: block; /* Makes the entire box clickable */
         }
 
         .car-card:hover {
@@ -132,29 +135,32 @@
         <h2 class="section-title">The Sedan Collection</h2>
         
         <div class="car-grid">
-            <div class="car-card">
+            <!-- BMW 3 Series Card -->
+            <a href="3series.html" class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" alt="BMW 3 Series">
                 <div class="car-info">
                     <h3 class="car-name">BMW 3 Series</h3>
                     <p class="car-desc">The ultimate driver's car. Combining iconic styling, track efficiency, and everyday luxury in a perfect compact layout.</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="car-card">
+            <!-- BMW 5 Series Card -->
+            <a href="5series.html" class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800" alt="BMW 5 Series">
                 <div class="car-info">
                     <h3 class="car-name">BMW 5 Series</h3>
                     <p class="car-desc">The benchmark of the executive class. Blending state-of-the-art technology with sharp, athletic road presence.</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="car-card">
+            <!-- BMW M5 Card -->
+            <a href="m5.html" class="car-card">
                 <img class="car-img" src="https://images.unsplash.com/photo-1607853202273-797f1c22a38e?auto=format&fit=crop&q=80&w=800" alt="BMW M5">
                 <div class="car-info">
                     <h3 class="car-name">BMW M5</h3>
                     <p class="car-desc">Track-ready supercar performance hidden inside a beautiful luxury sedan body. Unmatched power and precision.</p>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
